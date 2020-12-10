@@ -1,0 +1,5 @@
+﻿  animal.c
+E:\WorkSpace\YNNU\YNNU01\Animal\animal.c(82,9): warning C4013: “system”未定义；假设外部返回 int
+E:\WorkSpace\YNNU\YNNU01\Animal\animal.c(83,7): warning C4013: “exit”未定义；假设外部返回 int
+E:\WorkSpace\YNNU\YNNU01\Animal\animal.c(77,27): warning C4101: “len2”: 未引用的局部变量
+  animal.vcxproj -> E:\WorkSpace\YNNU\YNNU01\Debug\Animal.exe

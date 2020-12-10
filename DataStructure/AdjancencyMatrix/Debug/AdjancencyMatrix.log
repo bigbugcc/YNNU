@@ -1,0 +1,7 @@
+﻿  CreateAdjGraph.cpp
+visit.obj : error LNK2005: "void __cdecl DFSTraverseGraph(struct AdjList)" (?DFSTraverseGraph@@YAXUAdjList@@@Z) 已经在 CreateAdjGraph.obj 中定义
+visit.obj : error LNK2005: "void __cdecl DepthFirstSearch(struct AdjList,int)" (?DepthFirstSearch@@YAXUAdjList@@H@Z) 已经在 CreateAdjGraph.obj 中定义
+visit.obj : error LNK2005: "int __cdecl FirstAdjVertex(struct AdjList,int)" (?FirstAdjVertex@@YAHUAdjList@@H@Z) 已经在 CreateAdjGraph.obj 中定义
+visit.obj : error LNK2005: "int __cdecl NextAdjVertex(struct AdjList,int,int)" (?NextAdjVertex@@YAHUAdjList@@HH@Z) 已经在 CreateAdjGraph.obj 中定义
+visit.obj : error LNK2005: "int * visited" (?visited@@3PAHA) 已经在 CreateAdjGraph.obj 中定义
+E:\WorkSpace\YNNU\YNNU01\Debug\AdjancencyMatrix.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

@@ -1,0 +1,3 @@
+﻿  Main.cpp
+E:\WorkSpace\YNNU\YNNU\DataStructure\YanghuiTriangle\Main.cpp(88,1): warning C4326: “main”的返回类型应为“int”而非“void”
+  YanghuiTriangle.vcxproj -> E:\WorkSpace\YNNU\YNNU\DataStructure\Debug\YanghuiTriangle.exe

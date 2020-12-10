@@ -1,0 +1,6 @@
+E:\WorkSpace\YNNU\YNNU01\Debug\database.txt
+E:\WorkSpace\YNNU\YNNU01\Debug\deduce.txt
+E:\WorkSpace\YNNU\YNNU01\Debug\input.txt
+E:\WorkSpace\YNNU\YNNU01\Debug\output.txt
+E:\WorkSpace\YNNU\YNNU01\Debug\result.txt
+E:\WorkSpace\YNNU\YNNU01\Debug\rule.txt
