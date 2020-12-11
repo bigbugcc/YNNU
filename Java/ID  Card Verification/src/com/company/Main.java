@@ -58,6 +58,8 @@ public class Main {
                     if(idLast.equals(strid)){
                         System.out.println("该身份证正确！");
                         System.out.println("出生日期为:"+strId.substring(6,14));
+                        int a = Integer.parseInt(String.valueOf(id[16]));
+                        System.out.printf("性别："+ (a%2==1?"男":"女"));
 
                     }else{
                         System.out.println("该身份证不合法！");
