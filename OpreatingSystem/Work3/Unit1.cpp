@@ -23,15 +23,15 @@ const int TotalCount=24;
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
- b=CreateSemaphore(NULL,1,1,NULL);//windows提供的创建信号量的API函数；
- a=CreateSemaphore(NULL,0,1,NULL);//第二个参数表示信号量value属性的初始值；
+ b=CreateSemaphore(NULL,1,1,NULL);//windows??????????????API??????
+ a=CreateSemaphore(NULL,0,1,NULL);//?????????????????value??????????
  c=CreateSemaphore(NULL,0,1,NULL);
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormDestroy(TObject *Sender)
 {
- CloseHandle(b);//关闭句柄对应的资源；
- CloseHandle(a);//关闭句柄对应的资源；
+ CloseHandle(b);//???????????????
+ CloseHandle(a);//???????????????
  CloseHandle(c);
 }
 //---------------------------------------------------------------------------
@@ -42,12 +42,12 @@ DWORD CALLBACK ThreadFunctionRead(void *p)
  String S;
  for(int j=0;j<=TotalCount;j++)
  {
-  if(Form1->CheckBox1->Checked)WaitForSingleObject(c,INFINITE);//同步操作，相当于P原语；
+  if(Form1->CheckBox1->Checked)WaitForSingleObject(c,INFINITE);//?????????????P???
   Sleep(1);
   data--;//data=data-1;
   S.sprintf(L"Information: %d",data);
   SendMessage(Form1->ListBox1->Handle,LB_ADDSTRING,0,(long)S.c_str());
-  if(Form1->CheckBox1->Checked)ReleaseSemaphore(a,1,NULL);//同步操作，相当于V原语；
+  if(Form1->CheckBox1->Checked)ReleaseSemaphore(a,1,NULL);//?????????????V???
  };
  return(0);
 }
@@ -58,12 +58,12 @@ DWORD CALLBACK ThreadFunctionWrite(void *p)
  String S;
  for(int j=0;j<=TotalCount;j++)
  {
-  if(Form1->CheckBox1->Checked)WaitForSingleObject(a,INFINITE);//同步操作，相当于P原语；
+  if(Form1->CheckBox1->Checked)WaitForSingleObject(a,INFINITE);//?????????????P???
   Sleep(1);
   data--;//data=data+1;
   S.sprintf(L"Information: %d",data);
   SendMessage(Form1->ListBox2->Handle,LB_ADDSTRING,0,(long)S.c_str());
-  if(Form1->CheckBox1->Checked)ReleaseSemaphore(b,1,NULL);//释放信号量对应的资源，释放1个；相当于V原语；
+  if(Form1->CheckBox1->Checked)ReleaseSemaphore(b,1,NULL);//?????????????????????1????????V???
  };
  return(0);
 }
@@ -76,12 +76,12 @@ DWORD CALLBACK ThreadFunctionRead1(void *p)
  String S;
  for(int j=0;j<=TotalCount;j++)
  {
-  if(Form1->CheckBox1->Checked)WaitForSingleObject(b,INFINITE);//同步操作，相当于P原语；
+  if(Form1->CheckBox1->Checked)WaitForSingleObject(b,INFINITE);//?????????????P???
   Sleep(1);
   data+=2;//data=data-1;
   S.sprintf(L"Information: %d",data);
   SendMessage(Form1->ListBox3->Handle,LB_ADDSTRING,0,(long)S.c_str());
-  if(Form1->CheckBox1->Checked)ReleaseSemaphore(c,1,NULL);//同步操作，相当于V原语；
+  if(Form1->CheckBox1->Checked)ReleaseSemaphore(c,1,NULL);//?????????????V???
  };
  return(0);
 }
