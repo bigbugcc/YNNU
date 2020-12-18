@@ -8,6 +8,8 @@ import java.util.Comparator;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        System.out.printf("请先输入家庭数");
+        System.out.printf("\n编号 父 母 孩子1 孩子数 房产总数 总面积");
         Reader.init(System.in);
         Writer.init(System.out);
         solve();
