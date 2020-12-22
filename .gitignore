@@ -33,5 +33,9 @@
 .DS_Store
 .DS_Store?
 .IDEA
-.vs
+.vs?
+.Debug?
+*.idb
+*.db
+*.lastbuildstate
 
